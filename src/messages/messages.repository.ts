@@ -23,7 +23,7 @@ export class MessagesRepository {
         // console.log(`33 ${process.cwd()}/src/messages/files/messages.json`);
         // const contents = await fs.readFile(`${process.cwd()}/src/messages/files/messages.json`, 'utf8');
 
-        const file = await fs.readFile(process.cwd() + '/src/messages/files/messages.json', 'utf8');
+        const file = await fs.readFile('/src/messages/files/messages.json', 'utf8');
         const messages = JSON.parse(file);
         return messages;
         // const contents = await fs.readFile(process.cwd() + './files/messages.json', 'utf8');
