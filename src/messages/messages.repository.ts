@@ -1,5 +1,6 @@
 // import helper function from nodejs library
 import { readFile, writeFile} from 'fs/promises';
+import { promises as fs } from 'fs';
 
 export class MessagesRepository {
     async findOne(id: string) {
@@ -15,7 +16,11 @@ export class MessagesRepository {
     }
 
     async findAll() {
-        const contents = await readFile('messages.json', 'utf8');
+        // const file = await fs.readFile(process.cwd() + './messages.json', 'utf8');
+        // const contents = await readFile('messages.json', 'utf8');
+        // console.log(`${process.cwd()}/src/messages/files/messages.json`);
+        const contents = await fs.readFile(`${process.cwd()}/src/messages/files/messages.json`, 'utf8');
+        // const contents = await fs.readFile(process.cwd() + './files/messages.json', 'utf8');
         const messages = JSON.parse(contents);
         return messages;
     }
