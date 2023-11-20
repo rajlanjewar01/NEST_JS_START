@@ -19,10 +19,16 @@ export class MessagesRepository {
         // const file = await fs.readFile(process.cwd() + './messages.json', 'utf8');
         // const contents = await readFile('messages.json', 'utf8');
         // console.log(`${process.cwd()}/src/messages/files/messages.json`);
-        const contents = await fs.readFile(`${process.cwd()}/src/messages/files/messages.json`, 'utf8');
-        // const contents = await fs.readFile(process.cwd() + './files/messages.json', 'utf8');
-        const messages = JSON.parse(contents);
+        // console.log(`11 ${process.cwd()}`);
+        // console.log(`33 ${process.cwd()}/src/messages/files/messages.json`);
+        // const contents = await fs.readFile(`${process.cwd()}/src/messages/files/messages.json`, 'utf8');
+
+        const file = await fs.readFile(process.cwd() + '/src/messages/files/messages.json', 'utf8');
+        const messages = JSON.parse(file);
         return messages;
+        // const contents = await fs.readFile(process.cwd() + './files/messages.json', 'utf8');
+        // const messages = JSON.parse(contents);
+        // return messages;
     }
 
     async create(content: string) {
