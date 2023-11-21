@@ -21,7 +21,7 @@ export class MessagesRepository {
     async findAll() {
         //read all content of file
           // read all content of file
-          const contents = await readFile('messages.json', 'utf8');
+          const contents = await readFile('./messages/files/messages.json', 'utf8');
           // parse json into array of objects
           const messages = JSON.parse(contents);
           return messages;

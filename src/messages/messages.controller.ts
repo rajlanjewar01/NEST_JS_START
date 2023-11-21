@@ -2,14 +2,6 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { MessagesService } from './messages.service';
 import { createMessageDto } from './dtos/create.message.dto';
 
-@Controller()
-export class AppController {
-  @Get()
-  getHello(): string {
-    return 'Hello World!';
-  }
-}
-
 @Controller('messages')
 export class MessagesController {
     messagesService: MessagesService;
