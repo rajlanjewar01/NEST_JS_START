@@ -22,10 +22,10 @@ export class MessagesRepository {
         // console.log(`11 ${process.cwd()}`);
         // console.log(`33 ${process.cwd()}/src/messages/files/messages.json`);
         // const contents = await fs.readFile(`${process.cwd()}/src/messages/files/messages.json`, 'utf8');
-        console.log(process.cwd());
-        const file = await fs.readFile(process.cwd() + '/src/messages/files/messages.json', 'utf8');
-        const messages = JSON.parse(file);
-        return messages;
+        // console.log(process.cwd());
+        // const file = await fs.readFile(process.cwd() + '/src/messages/files/messages.json', 'utf8');
+        // const messages = JSON.parse(file);
+        return process.cwd();
         // const contents = await fs.readFile(process.cwd() + './files/messages.json', 'utf8');
         // const messages = JSON.parse(contents);
         // return messages;
